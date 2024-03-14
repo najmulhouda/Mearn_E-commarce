@@ -1,10 +1,12 @@
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { selectCount, selectStatus } from "./counterSlice"
+import { useDispatch, useSelector } from "react-redux"
+import { selectCount } from "./counterSlice"
 
-export const Counter = () => {
-  const dispatch = useAppDispatch()
-  const count = useAppSelector(selectCount)
-  const status = useAppSelector(selectStatus)
-
-  return <div></div>
+export default function Counter() {
+  const count = useSelector(selectCount)
+  const dispatch = useDispatch()
+  return (
+    <div>
+      <div></div>
+    </div>
+  )
 }
